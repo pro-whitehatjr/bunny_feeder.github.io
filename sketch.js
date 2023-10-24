@@ -107,7 +107,7 @@ function setup()
 
   ground = new Ground(200,canH,600,20);
   blink.frameDelay = 20;
-  eat.frameDelay = 20;
+  eat.frameDelay = 25;
 
   bunny = createSprite(170,canH-80,100,100);
   bunny.scale = 0.2;
@@ -198,7 +198,7 @@ function collide(body,sprite)
   if(body!=null)
         {
          var d = dist(body.position.x,body.position.y,sprite.position.x,sprite.position.y);
-          if(d<=80)
+          if(d<=70)
             {
               World.remove(engine.world,fruit);
                fruit = null;
